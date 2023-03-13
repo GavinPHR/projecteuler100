@@ -1,5 +1,5 @@
 #include <cstdint>
-#include <iostream>
+
 
 inline std::uint64_t factorial(int n, int r = 0) {
 	std::uint64_t ans = 1;
@@ -9,6 +9,7 @@ inline std::uint64_t factorial(int n, int r = 0) {
 
 
 inline std::uint64_t nCr(int n, int r) {
+	if (r > n - r) r = n - r;
 	return factorial(n, n - r) / factorial(r);
 }
 
