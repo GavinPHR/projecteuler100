@@ -2,10 +2,9 @@
 
 
 std::ostream& operator<<(std::ostream &os, BigUInt const &n) {
-	std::string s;
-	for (auto it = n.xs.rbegin(); it != n.xs.rend(); ++it) s += (char) (*it + '0');
-    return os << s;
+    return os << n.to_string();
 }
+
 BigUInt BigUInt::multiply(std::uint8_t m, const BigUInt &rhs, int padding) {
 	auto &ys = rhs.xs;
 	int s = ys.size();

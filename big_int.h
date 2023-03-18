@@ -9,6 +9,11 @@ class BigUInt {
 public:
 	std::vector<std::uint8_t> xs;
 
+	std::string to_string() const {
+		std::string s;
+		for (auto it = xs.rbegin(); it != xs.rend(); ++it) s += (char) (*it + '0');
+		return s;
+	}
 	friend std::ostream &operator<<(std::ostream &os, BigUInt const &n);
 	BigUInt multiply(std::uint8_t m, const BigUInt &rhs, int padding);
 
