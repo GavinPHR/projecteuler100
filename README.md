@@ -1,1 +1,1 @@
-![](https://projecteuler.net/profile/gavinphr.png)
+https://projecteuler.net/profile/gavinphr.png
